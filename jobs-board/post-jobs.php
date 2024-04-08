@@ -61,7 +61,7 @@ foreach ($message_list->messages as $message) {
         // If no closing date found, set to two months in the future
         $closing = $json->closing;
         if ($closing == null) {
-          $closing = date('Y-m-d H:i:s', strtotime('today + 2 months'));
+          $closing = date('Y-m-d', strtotime('today + 2 months'));
         }
         
         // Strip unwanted tags, signature, and style attributes
